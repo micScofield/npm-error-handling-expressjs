@@ -1,4 +1,4 @@
-This package offers an error handling mechnanism for express.js applications. The underlying code is written in TypeScript.
+This package offers an error handling mechnanism for express.js applications. This can be useful in cases where we dont want to share repititive code inside different services inside the microservice architecture. And a single source of truth will be applicable for all services running. The underlying code is written in TypeScript.
 
 Some error elasses are defined which extend an astract error class (Custom Error Class):
 IMP NOTE: To use these classes, make sure to add errorHandler middleware after specifying all routes inside the app.js file (or any entry file) 
