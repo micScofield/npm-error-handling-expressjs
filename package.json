@@ -15,6 +15,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/micScofield/expressjs-errorHandling-classes-middlewares.git"
+  },
   "devDependencies": {
     "del-cli": "^3.0.0",
     "typescript": "^3.8.3"
