@@ -12,13 +12,14 @@
     "build": "npm run clean && tsc",
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
-  "keywords": [],
+  "keywords": ["express", "express-validator", "error handling", "middlewares"],
   "author": "",
   "license": "ISC",
   "repository": {
     "type": "git",
     "url": "https://github.com/micScofield/expressjs-errorHandling-classes-middlewares.git"
   },
+  "homepage": "https://github.com/micScofield/expressjs-errorHandling-classes-middlewares/#readme",
   "devDependencies": {
     "del-cli": "^3.0.0",
     "typescript": "^3.8.3"
