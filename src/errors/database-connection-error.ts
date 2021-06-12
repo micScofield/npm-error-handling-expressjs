@@ -5,7 +5,7 @@ export class DatabaseConnectionError extends CustomError {
     reason = 'Error connecting to database'
 
     constructor() {
-        super('unprocessable entity 422')
+        super('Db error')
 
         //only because of typescript, we need to specify that we are extending a built in class
         Object.setPrototypeOf(this, DatabaseConnectionError.prototype) 

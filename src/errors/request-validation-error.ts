@@ -33,7 +33,7 @@ export class RequestValidationError extends CustomError{
 
     constructor(public errors: ValidationError[]) {
         //passing a string to super means that if we throw using default Error class, like for logging purposes inside app, we can pass them like this. super() means reaching out to Error class itself.
-        super('Error connecting to db') 
+        super('request validation failed') 
 
         //only because of typescript, we need to specify that we are extending a built in class
         Object.setPrototypeOf(this, RequestValidationError.prototype) 
