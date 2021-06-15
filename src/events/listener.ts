@@ -15,7 +15,7 @@ export abstract class Listener<T extends Event> {
     abstract queueGroupName: string
     abstract onMessage(data: T['data'], msg: Message): void
 
-    private client: Stan
+    protected client: Stan // deliberately made protected so the child classes can use this client to publish an event from within listener files. Otherwise if this was private, we would have to import natsWrapper.client and we would have faced issues while testing as we are mocking that natswrapper import and extra imports means files are tied together. Better prevent that and use protected here instead of private.
     protected ackWait = 5 * 1000
 
     constructor(client: Stan) {
@@ -32,6 +32,7 @@ export abstract class Listener<T extends Event> {
     }
 
     listen() {
+        // create a subscription
         const subscription = this.client.subscribe(
             this.subject,
             this.queueGroupName,
